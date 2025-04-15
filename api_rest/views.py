@@ -1,3 +1,8 @@
+# -----------------------------
+# Views de API (DRF - JSON)
+# -----------------------------
+
+
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 
@@ -104,3 +109,5 @@ def delete_user(request):
             return Response(status=status.HTTP_404_NOT_FOUND)
             
     return Response(status=status.HTTP_400_BAD_REQUEST)
+
+

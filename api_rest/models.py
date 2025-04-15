@@ -2,7 +2,8 @@ from django.db import models
 
 # definindo campos do db
 class User(models.Model):
-    user_nickname = models.CharField(max_length=100, primary_key=True, default='')
+    id = models.AutoField(primary_key=True)
+    user_nickname = models.CharField(max_length=100, default='')
     user_name = models.CharField(max_length=150, default='')
     user_email = models.EmailField(default='')
     user_age = models.IntegerField(default='')
