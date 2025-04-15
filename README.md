@@ -1,8 +1,9 @@
 
 # 🧩 Django REST API - User Manager
 
-Olá! Este projeto é uma API REST que desenvolvi com **Django** e **Django REST Framework** para gerenciar usuários.  
-Ela implementa o CRUD completo: criação, leitura, atualização e exclusão de usuários.
+Olá! Este projeto é uma aplicação Django com Django REST Framework e Django Templates para gerenciar usuários.
+Ele implementa tanto um CRUD de API quanto views que renderizam HTML, permitindo a criação, leitura, atualização e exclusão de usuários, além de estilização com Bootstrap.
+
 
 ---
 
@@ -12,7 +13,7 @@ Ela implementa o CRUD completo: criação, leitura, atualização e exclusão de
 - [Django](https://www.djangoproject.com/)
 - [Django REST Framework (DRF)](https://www.django-rest-framework.org/)
 - [SQLite](https://www.sqlite.org/index.html)
-
+- [Bootstrap](https://getbootstrap.com/)
 ---
 
 ## 📁 Estrutura do Projeto
@@ -96,6 +97,27 @@ venv\Scripts\activate     # no Windows
 
 ---
 
+### Frontend - Views HTML
+
+Esses endpoints são responsáveis pela renderização de páginas HTML para as operações de usuário, utilizando templates do Django.
+
+#### 🔍 Visualizar usuários
+`GET /pages/users/`  
+Exibe a lista de todos os usuários cadastrados.
+
+#### ➕ Criar usuário
+`GET /pages/users/create/`  
+Exibe o formulário para criar um novo usuário.
+
+#### ✏️ Editar usuário
+`GET /pages/users/edit/<str:nickname>/`  
+Exibe o formulário para editar os dados de um usuário específico.
+
+#### 🗑️ Excluir usuário
+`GET /pages/users/delete/<str:nickname>/`  
+Exibe a confirmação para excluir um usuário específico.
+
+
 ## 🧪 Testando com Postman
 
 - Certifique-se de que o servidor Django está rodando com `python manage.py runserver`
@@ -108,10 +130,8 @@ venv\Scripts\activate     # no Windows
 
 - ✅ Atualização parcial com método `PATCH`
 - 🔒 Autenticação e permissões com `TokenAuthentication`
-- 🖼️ Integração com um frontend feito em React
 - 🌐 Substituir o banco de dados SQLite por PostgreSQL 
 - 🌍 Deploy na nuvem (Render, Vercel ou Heroku)
-- 📄 Documentação automática com Swagger ou Redoc
 - 🔎 Filtros, ordenação e paginação
 
 ---
