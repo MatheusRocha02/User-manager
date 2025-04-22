@@ -35,6 +35,38 @@ python -m venv venv
 source venv/bin/activate  # no Linux/macOS
 venv\Scripts\activate     # no Windows
 ```
+## 🐳 Rodando com Docker
+
+> Não quer instalar tudo manualmente? Rode o projeto em um container com Docker! 
+
+### 📋 Pré-requisitos
+
+- [Docker](https://www.docker.com/) instalado na sua máquina  
+- [Docker Compose](https://docs.docker.com/compose/) (já vem incluso no Docker Desktop)
+
+### ▶️ Como iniciar o projeto
+
+No terminal, dentro da pasta raiz do projeto (onde está o arquivo `docker-compose.yml`), execute:
+
+```bash
+docker-compose up --build
+
+Isso irá:
+
+- ✅ Construir a imagem da aplicação Django
+- 🚀 Subir o container com tudo pronto (Python, dependências, servidor)
+
+O app estará rodando em:  
+🔗 [http://localhost:8000](http://localhost:8000)
+
+---
+
+## ⛔ Como parar o projeto
+
+Para parar e remover os containers, use:
+
+```bash
+docker-compose down
 
 
 ## 🔗 Endpoints Disponíveis

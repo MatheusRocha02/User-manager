@@ -13,7 +13,7 @@ class UserListViewTest(TestCase):
         #self.client = cliente de testes do django
         # .get = método do request simulado
         # reverse = chama a view que mapeei lá nas urls
-        response = self.client.get(reverse('user_list_view'))
+        response = self.client.get(reverse('c'))
         self.assertEqual(response.status_code, 200) # verifica código HTTP da resposta
         self.assertTemplateUsed(response, 'api_rest/users/user_list.html') # verifica so template utilizado
         
